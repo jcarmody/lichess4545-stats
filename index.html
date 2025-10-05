@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lichess4545 League Statistics</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e0e0e0;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #fff;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            color: #a0a0a0;
+            font-size: 1.1em;
+        }
+
+        .award-section {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .award-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .award-icon {
+            font-size: 3em;
+        }
+
+        .award-title {
+            flex: 1;
+        }
+
+        .award-title h2 {
+            color: #ffd700;
+            font-size: 1.8em;
+            margin-bottom: 5px;
+        }
+
+        .award-description {
+            color: #b0b0b0;
+            font-size: 0.95em;
+            font-style: italic;
+        }
+
+        .winner-card {
+            background: rgba(255, 215, 0, 0.1);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .winner-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(255, 215, 0, 0.2);
+        }
+
+        .winner-avatar {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            font-weight: bold;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .winner-info {
+            flex: 1;
+        }
+
+        .winner-name {
+            font-size: 1.5em;
+            color: #fff;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .winner-name a {
+            color: #ffd700;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .winner-name a:hover {
+            color: #ffed4e;
+            text-decoration: underline;
+        }
+
+        .winner-stats {
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 8px 15px;
+            border-radius: 6px;
+            font-size: 0.9em;
+        }
+
+        .stat-label {
+            color: #888;
+            font-size: 0.85em;
+            margin-right: 5px;
+        }
+
+        .stat-value {
+            color: #ffd700;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #888;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #aaa;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .award-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .winner-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .winner-stats {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏆 Lichess4545 League Statistics</h1>
+            <p class="subtitle">Special Awards & Achievements</p>
+        </header>
+
+        <main>
+            <div class="award-section">
+                <div class="award-header">
+                    <div class="award-icon">⛰️</div>
+                    <div class="award-title">
+                        <h2>The Sisyphus Award</h2>
+                        <p class="award-description">
+                            For persistent determination in the face of endless challenges – 
+                            rolling the boulder uphill, game after game, season after season.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="winner-card">
+                    <div class="winner-avatar">oS</div>
+                    <div class="winner-info">
+                        <div class="winner-name">
+                            <a href="https://lichess.org/@/oOoSHONUFFoOo" target="_blank" rel="noopener">
+                                oOoSHONUFFoOo
+                            </a>
+                        </div>
+                        <div class="winner-stats">
+                            <div class="stat">
+                                <span class="stat-label">Season:</span>
+                                <span class="stat-value">45</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Rating:</span>
+                                <span class="stat-value">2008</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Team:</span>
+                                <span class="stat-value">Forty-Five Point Pawn Exploding King Technique</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Data sourced from <a href="https://www.lichess4545.com" target="_blank" rel="noopener">lichess4545.com</a></p>
+            <p style="margin-top: 10px;">Built for the Lichess4545 community</p>
+        </footer>
+    </div>
+</body>
+</html>
